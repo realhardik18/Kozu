@@ -1,5 +1,6 @@
+'use client'
 import React from "react";
-import Card from "./components/card";
+import Card from "./components/Card";
 import Navbar from "../_components/Navbar";
 
 const kosuData = [
@@ -20,21 +21,21 @@ const CardsPage = () => {
   return (
     <div>
       <Navbar/>
-    <div className="p-6 bg-gray-900 min-h-screen text-white">
-      <h1 className="text-2xl font-bold mb-4">Active Kosu</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {activeKosu.map((kosu, index) => (
-          <Card key={index} {...kosu} isCompleted={false} />
-        ))}
+      <div className="p-6 bg-gray-900 min-h-screen text-white">
+        <h1 className="text-2xl font-bold mb-4">Active Kosu</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {activeKosu.map((kosu, index) => (
+            <Card key={index} {...kosu} isCompleted={false} />
+          ))}
+        </div>
+        
+        <h1 className="text-2xl font-bold mt-8 mb-4">Completed Kosu</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {completedKosu.map((kosu, index) => (
+            <Card key={index} {...kosu} isCompleted={true} />
+          ))}
+        </div>
       </div>
-      
-      <h1 className="text-2xl font-bold mt-8 mb-4">Completed Kosu</h1>
-      <div className="grid grid-cols-1 md/grid-cols-2 lg:grid-cols-3 gap-4">
-        {completedKosu.map((kosu, index) => (
-          <Card key={index} {...kosu} isCompleted={true} />
-        ))}
-      </div>
-    </div>
     </div>
   );
 };

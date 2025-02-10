@@ -22,7 +22,7 @@ def video_details(video_id):
         "title":snippet['title'],
         "url":"https://youtube.com/watch?v="+video_id,
         "by": snippet['channelTitle'],
-        "by_url":"htpps://youtube.com/channel/"+snippet['channelId'],
+        "by_url":"htps://youtube.com/channel/"+snippet['channelId'],
         "thumbnail_url":snippet['thumbnails']['high']['url']
     }
     return data
