@@ -1,11 +1,30 @@
-import youtube_dl
-def get_video_info(url):
-    with youtube_dl.YoutubeDL() as ydl:
-        info = ydl.extract_info(url, download=False)
-        data = {
-            "title": info.get("title"),
-            "channel": info.get("uploader"),
-            "length": info.get("duration")
-        }
+from dotenv import load_dotenv
+import os
+import requests
+
+load_dotenv()
+
+def video_details(video_id):
+    api_key=os.getenv('YOUTUBE_API_KEY')
+    url = f"https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id={video_id}&key={api_key}"
+    response = requests.get(url)
+    
+    if response.status_code != 200:
+        return {"error": "Failed to fetch data", "status_code": response.status_code}
+    
+    data = response.json()
+    if "items" not in data or not data["items"]:
+        return {"error": "Video not found"}
+    
+    video_data = data["items"][0]
+    snippet = video_data["snippet"]    
+    data={
+        "title":snippet['title'],
+        "url":"https://youtube.com/watch?v="+video_id,
+        "by": snippet['channelTitle'],
+        "by_url":"htps://youtube.com/channel/"+snippet['channelId'],
+        "thumbnail_url":snippet['thumbnails']['high']['url']
+    }
     return data
-print(get_video_info('https://www.youtube.com/watch?v=Aem7zote38Q'))
+
+#print(video_details('pt2ZHmnDWVw'))
