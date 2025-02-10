@@ -43,7 +43,6 @@ def gemini_response(tags):
 
     # Generate the response
     response = model.generate_content(prompt)
-    print(response.text)
     return response.text
 
 def is_educational(video_id):
@@ -61,7 +60,7 @@ def is_educational(video_id):
     if "contentDetails" in item:
         iso_duration = item["contentDetails"]["duration"]
         duration_seconds = int(isodate.parse_duration(iso_duration).total_seconds())
-        if duration_seconds < 1800:
+        if duration_seconds < 1800:     #checking if the video is more than 30 minutes
             return False
     else:
         return False  # No duration found
