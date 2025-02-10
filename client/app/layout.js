@@ -1,26 +1,26 @@
-import { Roboto_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 
-const roboto_mono = Roboto_Mono({  
+const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
 });
 
 export const metadata = {
-  title: "HandyMan",
-  description: "cool shi",
+  title: "Kosu",
+  description: "",
 };
 
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
-    <html lang="en">
-      <body
-        className={`${roboto_mono} ${roboto_mono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+      <html lang="en">
+        <body className={`${inter.variable} font-sans antialiased`}>
+          {children}
+        </body>
+      </html>
     </ClerkProvider>
   );
 }

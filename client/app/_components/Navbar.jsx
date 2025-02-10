@@ -1,28 +1,50 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+import { motion } from "framer-motion";
 import { UserButton, SignedIn, SignedOut } from "@clerk/nextjs";
 
 export default function Navbar() {
   return (
-    <nav className="relative z-10 flex items-center justify-between p-4 md:p-6 bg-[#0D0B14]/90 backdrop-blur-md border-b border-gray-700">
-      <div className="flex items-center gap-2">        
-        <span className="font-semibold text-white">Kosu</span>
-      </div>
-      <div className="flex items-center gap-4 md:gap-6 text-white">
-        <Link href="/kosu" className="hover:text-[#6B4EAE] transition-colors">
+    <motion.nav
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="fixed top-0 left-0 w-full z-20 backdrop-blur-lg bg-[#0D0B14]/80 border-b border-gray-700 shadow-lg px-6 py-4 flex items-center justify-between"
+    >
+      {/* Logo */}
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        transition={{ type: "spring", stiffness: 200 }}
+        className="text-2xl font-extrabold text-white tracking-wide"
+      >
+        <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+          Kosu
+        </span>
+      </motion.div>
+
+      {/* Navigation Links */}
+      <div className="flex items-center gap-6 text-white">
+        <Link
+          href="/kosu"
+          className="relative transition duration-300 hover:text-blue-400"
+        >
           My Kosu
         </Link>
+
         <SignedOut>
-          <Link href="/sign-in" className="hover:text-[#6B4EAE] transition-colors">
+          <Link
+            href="/sign-in"
+            className="relative transition duration-300 hover:text-blue-400"
+          >
             Login
           </Link>
         </SignedOut>
+
         <SignedIn>
           <UserButton />
         </SignedIn>
       </div>
-    </nav>
+    </motion.nav>
   );
 }
