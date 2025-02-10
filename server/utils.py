@@ -107,3 +107,46 @@ def summarize_description(description):
 
 #print(video_details('4rALiJgQjHY'))
 #print(get_chapters(sample_description,453))
+
+def gemini_response(tags):
+    genai.configure(api_key=G_API_KEY)
+
+    # Select the model (e.g., gemini-pro)
+    model = genai.GenerativeModel("gemini-1.5-flash")
+
+    # Define the prompt
+    prompt = (f"Are these tags apt for a educational lecture which is of a length that some people might find it hard to watch in one sitting?, these are the tags:{tags}, just say true or false, no other response")
+
+    # Generate the response
+    response = model.generate_content(prompt)
+    return response.text
+
+def is_educational(video_id):
+    url = f"https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails&id={video_id}&key={API_KEY}"
+    
+    response = requests.get(url)
+    data = response.json()
+
+    if "items" not in data or not data["items"]:
+        return False  # Video not found
+
+    item = data["items"][0]
+    
+    # Get duration and convert to seconds
+    if "contentDetails" in item:
+        iso_duration = item["contentDetails"]["duration"]
+        duration_seconds = int(isodate.parse_duration(iso_duration).total_seconds())
+        if duration_seconds < 1800:     #checking if the video is more than 30 minutes
+            return False
+    else:
+        return False  # No duration found
+
+    snippet = item["snippet"]
+    title = snippet["title"].lower()
+    description = snippet["description"].lower()
+    tags = [tag.lower() for tag in snippet.get("tags", [])]  # Get tags safely
+
+    if gemini_response(tags) == 'True':
+        return True
+    return False
+
