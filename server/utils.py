@@ -4,8 +4,13 @@ import requests
 import isodate
 import math
 import google.generativeai as genai
+import json
+import datetime
+
 
 load_dotenv()
+G_API_KEY = os.getenv('G_API_KEY')
+API_KEY = os.getenv('YOUTUBE_API_KEY')
 
 def video_details(video_id):
     api_key=os.getenv('YOUTUBE_API_KEY')
@@ -136,7 +141,7 @@ def is_educational(video_id):
     if "contentDetails" in item:
         iso_duration = item["contentDetails"]["duration"]
         duration_seconds = int(isodate.parse_duration(iso_duration).total_seconds())
-        if duration_seconds < 1800:     #checking if the video is more than 30 minutes
+        if duration_seconds < 1800:    
             return False
     else:
         return False  # No duration found
@@ -149,4 +154,28 @@ def is_educational(video_id):
     if gemini_response(tags) == 'True':
         return True
     return False
+
+with open("kosu.json", "r") as file:
+    data = json.load(file)  # Load JSON into a dictionary
+
+def convert_to_datetime(timestamp):
+    return datetime.strptime(timestamp, "%Y-%m-%d-%H:%M:%S")
+
+def enter_buffer_time(data): #kosu calculator
+    start_time = convert_to_datetime(data["kosu_started"])
+    end_time = convert_to_datetime(data["kosu_ended"])
+    data['buffer_time'] = start_time - end_time
+    with open("kosu.json", "w") as file:
+        json.dump(data, file, indent=4)  # Pretty print with indentation
+
+def completion_percentage(data):
+    duration = convert_to_datetime(data['length of video'])
+    completed = convert_to_datetime(data['completed'])
+    percentage = (completed / duration) * 100
+    data['completion_percentage'] = percentage
+    with open("kosu.json", "w") as file:
+        json.dump(data, file, indent=4)
+
+
+
 
