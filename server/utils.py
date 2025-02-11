@@ -94,7 +94,7 @@ Chapters
 def get_chapters(description,lenght):
     genai.configure(api_key=os.getenv('GEMINI_API_KEY'))
     model = genai.GenerativeModel("gemini-2.0-flash")
-    response = model.generate_content(f"your job is the extract the chapters from a given youtube based of their description data. the data returned should be strcitly of JSON format with an array of objects. each object will have fields: chapter_name, start_time,end_time. if a give video does not have any chapters to extract return the text None.if a certain chapter has the same start time and end time , you must not add it. here is the data {description}. reply only with the json data or None and nothing else")
+    response = model.generate_content(f"your job is the extract the chapters from a given youtube based of their description data. the data returned should be strcitly of JSON format with an array of objects. each object will have fields: chapter_name, start_time,end_time. if a give video does not have any chapters to extract return the text None.if a certain chapter has the same start time and end time , you must not add it.if the time is of form 00:00 then add a 00: in thr front by default. here is the data {description}. reply only with the json data or None and nothing else")
     if 'json' not in response.text:
         return False
     else:
@@ -155,8 +155,7 @@ def create_kosu(id,daily_commitments,day_preferences):
             "thumbnail_url":video_data['thumbnail_url'],
             "title":video_data['title'],
             "url":video_data['url']                        
-        },
-        "track":len(video_data['chapter_info'])*[0]
+        },        
     }    
     data['kosu'].append(new_data)
     print(data)

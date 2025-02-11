@@ -2,8 +2,8 @@
 
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Info, Pencil, Save } from "lucide-react";
-import { Tooltip, TooltipProvider } from "@/components/ui/tooltip";
+import { Pencil, Save } from "lucide-react";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { Progress } from "@/components/ui/progress";
 import Navbar from "@/app/_components/Navbar";
 
@@ -12,28 +12,21 @@ export default function ToDo() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [completedChapters, setCompletedChapters] = useState([]);
+  const [currentTime, setCurrentTime] = useState("0:00");
   const [editingTime, setEditingTime] = useState(false);
-  const [currentTime, setCurrentTime] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
       try {
-        // Fetch video information
         const response = await fetch(`http://127.0.0.1:5000/vid_info/${id}`);
-        if (!response.ok) {
-          throw new Error("Failed to fetch data");
-        }
+        if (!response.ok) throw new Error("Failed to fetch data");
         const result = await response.json();
         setData(result);
-        
-        // Fetch initial cursor time
+
         const cursorResponse = await fetch(`http://127.0.0.1:5000/get_cursor?id=${id}`);
-        if (!cursorResponse.ok) {
-          throw new Error("Failed to fetch cursor");
-        }
-        const cursorResult = await cursorResponse.text();        
-        setCurrentTime(cursorResult.replace(/['"]+/g, ''));
+        if (!cursorResponse.ok) throw new Error("Failed to fetch cursor");
+        const cursorResult = await cursorResponse.text();
+        setCurrentTime(cursorResult.replace(/['"]+/g, ""));
       } catch (err) {
         setError(err.message);
       } finally {
@@ -43,31 +36,26 @@ export default function ToDo() {
     fetchData();
   }, [id]);
 
-  const toggleChapter = (index) => {
-    setCompletedChapters((prev) =>
-      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
-    );
+  const calculateProgress = (startTime, endTime, completedTime) => {
+    const toSeconds = (time) => {
+      const parts = time.split(":" ).map(Number);
+      return parts[0] * 60 + (parts[1] || 0);
+    };
+    const start = toSeconds(startTime);
+    const end = toSeconds(endTime);
+    const completed = toSeconds(completedTime);
+    return Math.min(100, Math.max(0, ((completed - start) / (end - start)) * 100));
   };
 
   const handleSaveTime = async () => {
     if (!currentTime) return;
-    const formattedTime = formatTime(currentTime);
     try {
-      await fetch(`http://127.0.0.1:5000/update_cursor?id=${id}&cursor=${formattedTime}`);
+      await fetch(`http://127.0.0.1:5000/update_cursor?id=${id}&cursor=${currentTime}`);
       setEditingTime(false);
     } catch (error) {
       console.error("Failed to update time:", error);
     }
   };
-
-  const formatTime = (time) => {
-    const parts = time.split(":").map((part) => part.padStart(2, "0"));
-    return parts.join(":");
-  };
-
-  const progress = data
-    ? Math.round((completedChapters.length / data.meta_data.chapter_info.length) * 100)
-    : 0;
 
   if (loading) return <div className="min-h-screen bg-black flex items-center justify-center font-mono">Loading...</div>;
   if (error) return <div className="min-h-screen bg-black flex items-center justify-center font-mono text-red-500">Error: {error}</div>;
@@ -109,25 +97,24 @@ export default function ToDo() {
                       </>
                     )}
                   </div>
-                  <ul className="space-y-4">
-                    {data.meta_data.chapter_info.map((chapter, index) => (
-                      <li key={index} className="flex items-center gap-3 group">
-                        <input
-                          type="checkbox"
-                          className="w-5 h-5 rounded-sm border-2 border-gray-600 bg-gray-800 checked:bg-white checked:border-white transition-colors duration-200 cursor-pointer"
-                          checked={completedChapters.includes(index)}
-                          onChange={() => toggleChapter(index)}
-                        />
-                        <span className="text-gray-300 group-hover:text-white transition-colors duration-200">
-                          {chapter.chapter_name}
-                        </span>
-                      </li>
-                    ))}
+                  <ul className="space-y-4 overflow-y-auto max-h-96">
+                    {data.meta_data.chapter_info.map((chapter, index) => {
+                      const progress = calculateProgress(chapter.start_time, chapter.end_time, currentTime);
+                      return (
+                        <li key={index} className="space-y-1">
+                          <span className="text-gray-300">{chapter.chapter_name}</span>
+                          <Progress
+                            bg="bg-green-500"
+                            value={progress}
+                            className="w-5/6"
+                            indicatorClassName="bg-green-700"
+                          />
+
+                          <p className="text-xs text-gray-400">{progress.toFixed(2)}% completed</p>
+                        </li>
+                      );
+                    })}
                   </ul>
-                  <div className="mt-6 space-y-2">
-                    <Progress value={progress} className="w-full bg-gray-800" indicatorClassName="bg-white" />
-                    <p className="text-sm text-gray-400">{progress}% completed</p>
-                  </div>
                 </div>
               </div>
               <div className="w-full md:w-2/3">
@@ -141,11 +128,12 @@ export default function ToDo() {
                       allowFullScreen
                     ></iframe>
                   </div>
+                  <p className="text-gray-300">{data.meta_data.summarized_description}</p>
                 </div>
               </div>
             </div>
           </div>
-        </div>s
+        </div>
       </TooltipProvider>
     </div>
   );

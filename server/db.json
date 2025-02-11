@@ -2,11 +2,11 @@
     "user": "realhardik18",
     "kosu": [
         {
-            "id": "nJ25yl34Uqw",
-            "start": "11-02-2025-10:03:55",
-            "daily_commitments": "2",
-            "day_preferences": "1100000",
-            "video_cursor": "00:00:50",
+            "id": "rfscVS0vtbw",
+            "start": "11-02-2025-12:28:29",
+            "daily_commitments": "4",
+            "day_preferences": "0100001",
+            "video_cursor": "00:11:11",
             "meta_data": {
                 "by": "freeCodeCamp.org",
                 "by_url": "htps://youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ",
@@ -14,150 +14,273 @@
                     {
                         "chapter_name": "Introduction",
                         "start_time": "00:00:00",
-                        "end_time": "00:54:16"
+                        "end_time": "00:01:45"
                     },
                     {
-                        "chapter_name": "AI and ML Fundamentals",
-                        "start_time": "00:54:16",
-                        "end_time": "03:02:21"
+                        "chapter_name": "Installing Python & PyCharm",
+                        "start_time": "00:01:45",
+                        "end_time": "00:06:40"
                     },
                     {
-                        "chapter_name": "Gen AI Primer",
-                        "start_time": "03:02:21",
-                        "end_time": "03:32:55"
+                        "chapter_name": "Setup & Hello World",
+                        "start_time": "00:06:40",
+                        "end_time": "00:10:23"
                     },
                     {
-                        "chapter_name": "Data and ML",
-                        "start_time": "03:32:55",
-                        "end_time": "03:47:56"
+                        "chapter_name": "Drawing a Shape",
+                        "start_time": "00:10:23",
+                        "end_time": "00:15:06"
                     },
                     {
-                        "chapter_name": "LLM Basics",
-                        "start_time": "03:47:56",
-                        "end_time": "04:12:22"
+                        "chapter_name": "Variables & Data Types",
+                        "start_time": "00:15:06",
+                        "end_time": "00:27:03"
                     },
                     {
-                        "chapter_name": "AI Powered Assistants",
-                        "start_time": "04:12:22",
-                        "end_time": "04:24:42"
+                        "chapter_name": "Working With Strings",
+                        "start_time": "00:27:03",
+                        "end_time": "00:38:18"
                     },
                     {
-                        "chapter_name": "Env Setup",
-                        "start_time": "04:24:42",
-                        "end_time": "06:12:17"
+                        "chapter_name": "Working With Numbers",
+                        "start_time": "00:38:18",
+                        "end_time": "00:48:26"
                     },
                     {
-                        "chapter_name": "Prompt Engineering",
-                        "start_time": "06:12:17",
-                        "end_time": "07:00:25"
+                        "chapter_name": "Getting Input From Users",
+                        "start_time": "00:48:26",
+                        "end_time": "00:52:37"
                     },
                     {
-                        "chapter_name": "WorkBenches and Playgrounds",
-                        "start_time": "07:00:25",
-                        "end_time": "07:44:09"
+                        "chapter_name": "Building a Basic Calculator",
+                        "start_time": "00:52:37",
+                        "end_time": "00:58:27"
                     },
                     {
-                        "chapter_name": "Model as a Service",
-                        "start_time": "07:44:09",
-                        "end_time": "08:36:26"
+                        "chapter_name": "Mad Libs Game",
+                        "start_time": "00:58:27",
+                        "end_time": "01:03:10"
                     },
                     {
-                        "chapter_name": "LLM DevTools and Workflow",
-                        "start_time": "08:36:26",
-                        "end_time": "11:52:07"
+                        "chapter_name": "Lists",
+                        "start_time": "01:03:10",
+                        "end_time": "01:10:44"
                     },
                     {
-                        "chapter_name": "AI Code Assistants",
-                        "start_time": "11:52:07",
-                        "end_time": "14:04:37"
+                        "chapter_name": "List Functions",
+                        "start_time": "01:10:44",
+                        "end_time": "01:18:57"
                     },
                     {
-                        "chapter_name": "App Prototyping",
-                        "start_time": "14:04:37",
-                        "end_time": "17:21:06"
+                        "chapter_name": "Tuples",
+                        "start_time": "01:18:57",
+                        "end_time": "01:24:15"
                     },
                     {
-                        "chapter_name": "Containers",
-                        "start_time": "17:21:06",
-                        "end_time": "18:12:43"
+                        "chapter_name": "Functions",
+                        "start_time": "01:24:15",
+                        "end_time": "01:34:11"
                     },
                     {
-                        "chapter_name": "Serving",
-                        "start_time": "18:12:43",
-                        "end_time": "18:19:51"
+                        "chapter_name": "Return Statement",
+                        "start_time": "01:34:11",
+                        "end_time": "01:40:06"
                     },
                     {
-                        "chapter_name": "AI Delivery Platform",
-                        "start_time": "18:19:51",
-                        "end_time": "19:40:45"
+                        "chapter_name": "If Statements",
+                        "start_time": "01:40:06",
+                        "end_time": "01:54:07"
                     },
                     {
-                        "chapter_name": "GenAI Hardware",
-                        "start_time": "19:40:45",
-                        "end_time": "19:50:21"
+                        "chapter_name": "If Statements & Comparisons",
+                        "start_time": "01:54:07",
+                        "end_time": "02:00:37"
                     },
                     {
-                        "chapter_name": "Framework",
-                        "start_time": "19:50:21",
-                        "end_time": "19:51:49"
+                        "chapter_name": "Building a better Calculator",
+                        "start_time": "02:00:37",
+                        "end_time": "02:07:17"
                     },
                     {
-                        "chapter_name": "LLM Customization",
-                        "start_time": "19:51:49",
-                        "end_time": "19:52:35"
+                        "chapter_name": "Dictionaries",
+                        "start_time": "02:07:17",
+                        "end_time": "02:14:13"
                     },
                     {
-                        "chapter_name": "SFT",
-                        "start_time": "19:52:35",
-                        "end_time": "19:56:25"
+                        "chapter_name": "While Loop",
+                        "start_time": "02:14:13",
+                        "end_time": "02:20:21"
                     },
                     {
-                        "chapter_name": "Size Optimization",
-                        "start_time": "19:56:25",
-                        "end_time": "20:26:04"
+                        "chapter_name": "Building a Guessing Game",
+                        "start_time": "02:20:21",
+                        "end_time": "02:32:44"
                     },
                     {
-                        "chapter_name": "RAGS",
-                        "start_time": "20:26:04",
-                        "end_time": "22:21:19"
+                        "chapter_name": "For Loops",
+                        "start_time": "02:32:44",
+                        "end_time": "02:41:20"
                     },
                     {
-                        "chapter_name": "Agents",
-                        "start_time": "22:21:19",
-                        "end_time": "22:53:55"
+                        "chapter_name": "Exponent Function",
+                        "start_time": "02:41:20",
+                        "end_time": "02:47:13"
+                    },
+                    {
+                        "chapter_name": "2D Lists & Nested Loops",
+                        "start_time": "02:47:13",
+                        "end_time": "02:52:41"
+                    },
+                    {
+                        "chapter_name": "Building a Translator",
+                        "start_time": "02:52:41",
+                        "end_time": "03:00:18"
+                    },
+                    {
+                        "chapter_name": "Comments",
+                        "start_time": "03:00:18",
+                        "end_time": "03:04:17"
+                    },
+                    {
+                        "chapter_name": "Try / Except",
+                        "start_time": "03:04:17",
+                        "end_time": "03:12:41"
+                    },
+                    {
+                        "chapter_name": "Reading Files",
+                        "start_time": "03:12:41",
+                        "end_time": "03:21:26"
+                    },
+                    {
+                        "chapter_name": "Writing to Files",
+                        "start_time": "03:21:26",
+                        "end_time": "03:28:13"
+                    },
+                    {
+                        "chapter_name": "Modules & Pip",
+                        "start_time": "03:28:13",
+                        "end_time": "03:43:56"
+                    },
+                    {
+                        "chapter_name": "Classes & Objects",
+                        "start_time": "03:43:56",
+                        "end_time": "03:57:37"
+                    },
+                    {
+                        "chapter_name": "Building a Multiple Choice Quiz",
+                        "start_time": "03:57:37",
+                        "end_time": "04:08:28"
+                    },
+                    {
+                        "chapter_name": "Object Functions",
+                        "start_time": "04:08:28",
+                        "end_time": "04:12:37"
+                    },
+                    {
+                        "chapter_name": "Inheritance",
+                        "start_time": "04:12:37",
+                        "end_time": "04:20:43"
+                    },
+                    {
+                        "chapter_name": "Python Interpreter",
+                        "start_time": "04:20:43",
+                        "end_time": "04:20:43"
                     }
                 ],
-                "duration": "22:53:55",
-                "summarized_description": "ExamProChannel offers a comprehensive course on cloud-based Generative AI development. It covers the entire AI lifecycle, starting with fundamental AI/ML concepts and progressing through practical implementation, including prompt engineering, development tools, deployment, and optimization. Advanced topics like RAGs and AI Agents are also explored. The course is supported by Scrimba.\n",
-                "thumbnail_url": "https://i.ytimg.com/vi/nJ25yl34Uqw/hqdefault.jpg",
-                "title": "GenAI Essentials \u2013 Full Course for Beginners",
-                "url": "https://youtube.com/watch?v=nJ25yl34Uqw"
-            },
-            "track": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ]
+                "duration": "4:26:52",
+                "summarized_description": "This comprehensive Python course introduces core programming concepts, from installation to building games and translators.  Learn about variables, loops, functions, file handling, classes, and more through video tutorials. Dub tracks are available in Spanish, Arabic, Portuguese, and Hindi.  The course is developed by Mike Dane and supported by Scrimba.\n",
+                "thumbnail_url": "https://i.ytimg.com/vi/rfscVS0vtbw/hqdefault.jpg",
+                "title": "Learn Python - Full Course for Beginners [Tutorial]",
+                "url": "https://youtube.com/watch?v=rfscVS0vtbw"
+            }
+        },
+        {
+            "id": "ErnWZxJovaM",
+            "start": "11-02-2025-12:47:18",
+            "daily_commitments": "1",
+            "day_preferences": "0010000",
+            "video_cursor": "01:01:00",
+            "meta_data": {
+                "by": "Alexander Amini",
+                "by_url": "htps://youtube.com/channel/UCtslD4DGH6PKyG_1gFAX7sg",
+                "chapter_info": [
+                    {
+                        "chapter_name": "Introduction",
+                        "start_time": "00:00:00",
+                        "end_time": "00:07:25"
+                    },
+                    {
+                        "chapter_name": "Course information",
+                        "start_time": "00:07:25",
+                        "end_time": "00:13:37"
+                    },
+                    {
+                        "chapter_name": "Why deep learning?",
+                        "start_time": "00:13:37",
+                        "end_time": "00:17:20"
+                    },
+                    {
+                        "chapter_name": "The perceptron",
+                        "start_time": "00:17:20",
+                        "end_time": "00:24:30"
+                    },
+                    {
+                        "chapter_name": "Perceptron example",
+                        "start_time": "00:24:30",
+                        "end_time": "00:31:16"
+                    },
+                    {
+                        "chapter_name": "From perceptrons to neural networks",
+                        "start_time": "00:31:16",
+                        "end_time": "00:37:51"
+                    },
+                    {
+                        "chapter_name": "Applying neural networks",
+                        "start_time": "00:37:51",
+                        "end_time": "00:41:12"
+                    },
+                    {
+                        "chapter_name": "Loss functions",
+                        "start_time": "00:41:12",
+                        "end_time": "00:44:22"
+                    },
+                    {
+                        "chapter_name": "Training and gradient descent",
+                        "start_time": "00:44:22",
+                        "end_time": "00:49:52"
+                    },
+                    {
+                        "chapter_name": "Backpropagation",
+                        "start_time": "00:49:52",
+                        "end_time": "00:54:57"
+                    },
+                    {
+                        "chapter_name": "Setting the learning rate",
+                        "start_time": "00:54:57",
+                        "end_time": "00:58:54"
+                    },
+                    {
+                        "chapter_name": "Batched gradient descent",
+                        "start_time": "00:58:54",
+                        "end_time": "01:02:28"
+                    },
+                    {
+                        "chapter_name": "Regularization: dropout and early stopping",
+                        "start_time": "01:02:28",
+                        "end_time": "01:08:47"
+                    },
+                    {
+                        "chapter_name": "Summary",
+                        "start_time": "01:08:47",
+                        "end_time": "1:9:58"
+                    }
+                ],
+                "duration": "1:9:58",
+                "summarized_description": "MIT's 6.S191 Introduction to Deep Learning lecture (2024 Edition) with Alexander Amini covers fundamental concepts like perceptrons, neural networks, loss functions, gradient descent, and backpropagation. The lecture addresses training techniques including learning rate optimization, batched gradient descent, and regularization methods like dropout and early stopping. Access slides and labs at introtodeeplearning.com and stay updated via @MITDeepLearning on social media.\n",
+                "thumbnail_url": "https://i.ytimg.com/vi/ErnWZxJovaM/hqdefault.jpg",
+                "title": "MIT Introduction to Deep Learning | 6.S191",
+                "url": "https://youtube.com/watch?v=ErnWZxJovaM"
+            }
         }
     ]
 }

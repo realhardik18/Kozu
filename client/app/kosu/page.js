@@ -10,7 +10,19 @@ const CardsPage = () => {
   const { user } = useUser();
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
+  function timeToSeconds(time) {
+    const [hours, minutes, seconds] = time.split(':').map(Number);
+    return hours * 3600 + minutes * 60 + seconds;
+}
 
+function timePercentage(part, total) {
+    const partSeconds = timeToSeconds(part);
+    const totalSeconds = timeToSeconds(total);
+    
+    if (totalSeconds === 0) return 0; // Prevent division by zero
+
+    return (partSeconds / totalSeconds) * 100;
+}
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -78,7 +90,7 @@ const CardsPage = () => {
                   author={item.meta_data.by}
                   length={item.meta_data.duration}
                   completion_status={false}
-                  completion_percentage={0}
+                  completion_percentage={timePercentage(item.video_cursor, item.meta_data.duration)}
                   isCompleted={false}
                   thumbnail_url={item.meta_data.thumbnail_url}
                   video_url={item.meta_data.url}
