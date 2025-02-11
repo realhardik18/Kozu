@@ -129,14 +129,14 @@ def is_educational(video_id):
     response = model.generate_content(f"Are these tags apt for a educational lecture which is of a length that some people might find it hard to watch in one sitting?, these are the tags:{tags}, just say true or false")
     return eval(response)            
 
-def create_kosu(id,start,daily_commitments,day_preferences):
+def create_kosu(id,daily_commitments,day_preferences):
     with open('db.json','r') as file:
         data=file.read()
     data=eval(data)
     video_data=video_details(id)    
     new_data={
         "id":id,
-        "start":str(start),
+        "start":datetime.now().strftime("%d-%m-%Y-%H:%M:%S"),
         "daily_commitments":daily_commitments,
         "day_preferences":day_preferences,
         "meta_data":{
@@ -147,19 +147,26 @@ def create_kosu(id,start,daily_commitments,day_preferences):
             "summarized_description":video_data["summarized_description"],
             "thumbnail_url":video_data['thumbnail_url'],
             "title":video_data['title'],
-            "url":video_data['url']
-        }
+            "url":video_data['url']                        
+        },
+        "track":len(video_data['chapter_info'])*[0]
     }    
     data['kosu'].append(new_data)
     print(data)
     with open('db.json','w') as file:
         json.dump(data,file,indent=4)
 
+def get_with_id(id):
+    with open('db.json','r') as file:
+        obj=file.read()
+        obj=eval(obj)
+    i=[o['id'] for o in obj['kosu']].index(id)
+    return obj['kosu'][i]
 
-with open('db.json','r') as file:
-    d=file.read()
-    d=eval(d)
-    print(len(d['kosu']))
-#print(create_kosu('4rALiJgQjHY',datetime.now().strftime("%d-%m-%Y-%H:%M:%S"),4,'1010101'))
+#print(search_with_id('rfscVS0vtbw'))
+
+
+
+
 
 

@@ -4,6 +4,7 @@ import { useUser } from "@clerk/nextjs";
 import Link from "next/link";
 import Navbar from "../_components/Navbar";
 import Card from "./components/Card";
+import NewCard from "./components/NewCard";
 
 const CardsPage = () => {
   const { user } = useUser();
@@ -56,11 +57,7 @@ const CardsPage = () => {
         ))}
 
         {/* Add New Kosu Button */}
-        <div className="flex items-center justify-center border-2 border-dashed rounded-lg cursor-pointer h-[264px] bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700">
-          <Link href="/add-kosu" className="text-5xl font-bold text-gray-500 dark:text-gray-300">
-            +
-          </Link>
-        </div>
+        <NewCard/>
       </div>
     </div>
   );
