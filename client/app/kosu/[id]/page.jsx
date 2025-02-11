@@ -60,6 +60,7 @@ export default function ToDo() {
   if (loading) return <div className="min-h-screen bg-black flex items-center justify-center font-mono">Loading...</div>;
   if (error) return <div className="min-h-screen bg-black flex items-center justify-center font-mono text-red-500">Error: {error}</div>;
   if (!data) return <div className="min-h-screen bg-black flex items-center justify-center font-mono text-gray-400">No data found</div>;
+  console.log(data.video_cursor)
 
   return (
     <div >
