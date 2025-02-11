@@ -28,6 +28,12 @@ def video_details(video_id):
     duration_hours=int(total_duration//3600)
     duration_mins=math.floor((total_duration%3600)/60)
     duration_seconds=math.floor(total_duration%60)
+    if str(duration_hours)==1:
+        duration_hours='0'+str(duration_hours)
+    if str(duration_mins)==1:
+        duration_mins='0'+str(duration_mins)        
+    if str(duration_seconds)==1:
+        duration_seconds='0'+str(duration_seconds)                
     duration=f'{duration_hours}:{duration_mins}:{duration_seconds}'
     data={
         "title":snippet['title'],
@@ -139,6 +145,7 @@ def create_kosu(id,daily_commitments,day_preferences):
         "start":datetime.now().strftime("%d-%m-%Y-%H:%M:%S"),
         "daily_commitments":daily_commitments,
         "day_preferences":day_preferences,
+        "video_cursor":'00:00:00',
         "meta_data":{
             "by":video_data['by'],
             "by_url":video_data['by_url'],

@@ -10,7 +10,7 @@ export default function Navbar() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed top-0 left-0 w-full z-20 backdrop-blur-lg bg-[#0D0B14]/80 border-b border-gray-700 shadow-lg px-6 py-4 flex items-center justify-between"
+      className="fixed top-0 left-0 w-full z-20 bg-black border-b border-gray-700 shadow-lg px-6 py-4 flex items-center justify-between"
     >
       {/* Logo */}
       <motion.div

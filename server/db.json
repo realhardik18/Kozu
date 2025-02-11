@@ -2,342 +2,136 @@
     "user": "realhardik18",
     "kosu": [
         {
-            "id": "4rALiJgQjHY",
-            "start": "11-02-2025-06:29:46",
-            "daily_commitments": 4,
-            "day_preferences": "1010101",
-            "meta_data": {
-                "by": "freeCodeCamp.org",
-                "by_url": "htps://youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ",
-                "chapter_info": [
-                    {
-                        "chapter_name": "Teaser",
-                        "start_time": "0:00:00",
-                        "end_time": "0:00:00"
-                    },
-                    {
-                        "chapter_name": "Podcast Intro",
-                        "start_time": "0:00:00",
-                        "end_time": "0:00:00"
-                    },
-                    {
-                        "chapter_name": "Song - Passing Breeze",
-                        "start_time": "0:00:00",
-                        "end_time": "0:03:12"
-                    },
-                    {
-                        "chapter_name": "Introduction to AI and Robotics",
-                        "start_time": "0:03:12",
-                        "end_time": "0:06:21"
-                    },
-                    {
-                        "chapter_name": "Insights from CES 2023",
-                        "start_time": "0:06:21",
-                        "end_time": "0:09:06"
-                    },
-                    {
-                        "chapter_name": "The Future of Household Robots",
-                        "start_time": "0:09:06",
-                        "end_time": "0:12:13"
-                    },
-                    {
-                        "chapter_name": "The Evolution of Robotics and AI",
-                        "start_time": "0:12:13",
-                        "end_time": "0:15:12"
-                    },
-                    {
-                        "chapter_name": "The Importance of Humanoid Robots",
-                        "start_time": "0:15:12",
-                        "end_time": "0:18:14"
-                    },
-                    {
-                        "chapter_name": "Accessibility and Cost of Robotics",
-                        "start_time": "0:18:14",
-                        "end_time": "0:21:16"
-                    },
-                    {
-                        "chapter_name": "The Role of Software in Robotics",
-                        "start_time": "0:21:16",
-                        "end_time": "0:24:14"
-                    },
-                    {
-                        "chapter_name": "Peggy's Journey into Robotics",
-                        "start_time": "0:24:14",
-                        "end_time": "0:27:17"
-                    },
-                    {
-                        "chapter_name": "Experiences at Stanford University",
-                        "start_time": "0:27:17",
-                        "end_time": "0:37:43"
-                    },
-                    {
-                        "chapter_name": "Navigating the Path to Elite Education",
-                        "start_time": "0:37:43",
-                        "end_time": "0:43:31"
-                    },
-                    {
-                        "chapter_name": "The Evolution of Robotics and AI",
-                        "start_time": "0:43:31",
-                        "end_time": "0:51:05"
-                    },
-                    {
-                        "chapter_name": "The Intersection of Gaming and AI",
-                        "start_time": "0:51:05",
-                        "end_time": "0:58:52"
-                    },
-                    {
-                        "chapter_name": "Creating Infinite Games with AI",
-                        "start_time": "0:58:52",
-                        "end_time": "1:08:26"
-                    },
-                    {
-                        "chapter_name": "The Evolution of Virtual Characters",
-                        "start_time": "1:08:26",
-                        "end_time": "1:14:26"
-                    },
-                    {
-                        "chapter_name": "The Future of Self-Driving Cars",
-                        "start_time": "1:14:26",
-                        "end_time": "1:20:30"
-                    },
-                    {
-                        "chapter_name": "Advancements in AI and Robotics",
-                        "start_time": "1:20:30",
-                        "end_time": "1:22:03"
-                    },
-                    {
-                        "chapter_name": "The Quest for Immersive VR Experiences",
-                        "start_time": "1:22:03",
-                        "end_time": "1:30:11"
-                    },
-                    {
-                        "chapter_name": "Creating Personalized Gaming Worlds",
-                        "start_time": "1:30:11",
-                        "end_time": "1:37:15"
-                    },
-                    {
-                        "chapter_name": "The Evolution of Game Engines",
-                        "start_time": "1:37:15",
-                        "end_time": "1:41:07"
-                    },
-                    {
-                        "chapter_name": "The Future of Game Development Tools",
-                        "start_time": "1:41:07",
-                        "end_time": "1:43:46"
-                    },
-                    {
-                        "chapter_name": "The Path to Humanoid Robots",
-                        "start_time": "1:43:46",
-                        "end_time": "1:47:59"
-                    },
-                    {
-                        "chapter_name": "The Human Element in AI Decision Making",
-                        "start_time": "1:47:59",
-                        "end_time": "1:58:21"
-                    },
-                    {
-                        "chapter_name": "The Future of Robotics and Hardware Innovation",
-                        "start_time": "1:58:21",
-                        "end_time": "2:2:4"
-                    }
-                ],
-                "duration": "2:2:4",
-                "summarized_description": "This week's freeCodeCamp podcast features Peggy Wang, CTO of Ego AI. She discusses her journey from a first-generation immigrant in Milwaukee to building human-like AI agents for video games.  Peggy shares how freeCodeCamp helped her learn to code and propel her into robotics. The conversation covers topics like the future of household robots, self-driving cars, and the evolution of AI in gaming.  Listeners can learn more about Peggy's company, Ego AI, and hear a related interview with hardware engineer Bruno Haid.\n",
-                "thumbnail_url": "https://i.ytimg.com/vi/4rALiJgQjHY/hqdefault.jpg",
-                "title": "From freeCodeCamp to CTO with Robotics Engineer Peggy Wang [Podcast #159]",
-                "url": "https://youtube.com/watch?v=4rALiJgQjHY"
-            }
-        },
-        {
-            "id": "rfscVS0vtbw",
-            "start": "11-02-2025-07:28:12",
-            "daily_commitments": "5",
-            "day_preferences": "010101",
+            "id": "nJ25yl34Uqw",
+            "start": "11-02-2025-10:03:55",
+            "daily_commitments": "2",
+            "day_preferences": "1100000",
+            "video_cursor": "00:13:45",
             "meta_data": {
                 "by": "freeCodeCamp.org",
                 "by_url": "htps://youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ",
                 "chapter_info": [
                     {
                         "chapter_name": "Introduction",
-                        "start_time": "0:00",
-                        "end_time": "1:45"
+                        "start_time": "00:00:00",
+                        "end_time": "00:54:16"
                     },
                     {
-                        "chapter_name": "Installing Python & PyCharm",
-                        "start_time": "1:45",
-                        "end_time": "6:40"
+                        "chapter_name": "AI and ML Fundamentals",
+                        "start_time": "00:54:16",
+                        "end_time": "03:02:21"
                     },
                     {
-                        "chapter_name": "Setup & Hello World",
-                        "start_time": "6:40",
-                        "end_time": "10:23"
+                        "chapter_name": "Gen AI Primer",
+                        "start_time": "03:02:21",
+                        "end_time": "03:32:55"
                     },
                     {
-                        "chapter_name": "Drawing a Shape",
-                        "start_time": "10:23",
-                        "end_time": "15:06"
+                        "chapter_name": "Data and ML",
+                        "start_time": "03:32:55",
+                        "end_time": "03:47:56"
                     },
                     {
-                        "chapter_name": "Variables & Data Types",
-                        "start_time": "15:06",
-                        "end_time": "27:03"
+                        "chapter_name": "LLM Basics",
+                        "start_time": "03:47:56",
+                        "end_time": "04:12:22"
                     },
                     {
-                        "chapter_name": "Working With Strings",
-                        "start_time": "27:03",
-                        "end_time": "38:18"
+                        "chapter_name": "AI Powered Assistants",
+                        "start_time": "04:12:22",
+                        "end_time": "04:24:42"
                     },
                     {
-                        "chapter_name": "Working With Numbers",
-                        "start_time": "38:18",
-                        "end_time": "48:26"
+                        "chapter_name": "Env Setup",
+                        "start_time": "04:24:42",
+                        "end_time": "06:12:17"
                     },
                     {
-                        "chapter_name": "Getting Input From Users",
-                        "start_time": "48:26",
-                        "end_time": "52:37"
+                        "chapter_name": "Prompt Engineering",
+                        "start_time": "06:12:17",
+                        "end_time": "07:00:25"
                     },
                     {
-                        "chapter_name": "Building a Basic Calculator",
-                        "start_time": "52:37",
-                        "end_time": "58:27"
+                        "chapter_name": "WorkBenches and Playgrounds",
+                        "start_time": "07:00:25",
+                        "end_time": "07:44:09"
                     },
                     {
-                        "chapter_name": "Mad Libs Game",
-                        "start_time": "58:27",
-                        "end_time": "1:03:10"
+                        "chapter_name": "Model as a Service",
+                        "start_time": "07:44:09",
+                        "end_time": "08:36:26"
                     },
                     {
-                        "chapter_name": "Lists",
-                        "start_time": "1:03:10",
-                        "end_time": "1:10:44"
+                        "chapter_name": "LLM DevTools and Workflow",
+                        "start_time": "08:36:26",
+                        "end_time": "11:52:07"
                     },
                     {
-                        "chapter_name": "List Functions",
-                        "start_time": "1:10:44",
-                        "end_time": "1:18:57"
+                        "chapter_name": "AI Code Assistants",
+                        "start_time": "11:52:07",
+                        "end_time": "14:04:37"
                     },
                     {
-                        "chapter_name": "Tuples",
-                        "start_time": "1:18:57",
-                        "end_time": "1:24:15"
+                        "chapter_name": "App Prototyping",
+                        "start_time": "14:04:37",
+                        "end_time": "17:21:06"
                     },
                     {
-                        "chapter_name": "Functions",
-                        "start_time": "1:24:15",
-                        "end_time": "1:34:11"
+                        "chapter_name": "Containers",
+                        "start_time": "17:21:06",
+                        "end_time": "18:12:43"
                     },
                     {
-                        "chapter_name": "Return Statement",
-                        "start_time": "1:34:11",
-                        "end_time": "1:40:06"
+                        "chapter_name": "Serving",
+                        "start_time": "18:12:43",
+                        "end_time": "18:19:51"
                     },
                     {
-                        "chapter_name": "If Statements",
-                        "start_time": "1:40:06",
-                        "end_time": "1:54:07"
+                        "chapter_name": "AI Delivery Platform",
+                        "start_time": "18:19:51",
+                        "end_time": "19:40:45"
                     },
                     {
-                        "chapter_name": "If Statements & Comparisons",
-                        "start_time": "1:54:07",
-                        "end_time": "2:00:37"
+                        "chapter_name": "GenAI Hardware",
+                        "start_time": "19:40:45",
+                        "end_time": "19:50:21"
                     },
                     {
-                        "chapter_name": "Building a better Calculator",
-                        "start_time": "2:00:37",
-                        "end_time": "2:07:17"
+                        "chapter_name": "Framework",
+                        "start_time": "19:50:21",
+                        "end_time": "19:51:49"
                     },
                     {
-                        "chapter_name": "Dictionaries",
-                        "start_time": "2:07:17",
-                        "end_time": "2:14:13"
+                        "chapter_name": "LLM Customization",
+                        "start_time": "19:51:49",
+                        "end_time": "19:52:35"
                     },
                     {
-                        "chapter_name": "While Loop",
-                        "start_time": "2:14:13",
-                        "end_time": "2:20:21"
+                        "chapter_name": "SFT",
+                        "start_time": "19:52:35",
+                        "end_time": "19:56:25"
                     },
                     {
-                        "chapter_name": "Building a Guessing Game",
-                        "start_time": "2:20:21",
-                        "end_time": "2:32:44"
+                        "chapter_name": "Size Optimization",
+                        "start_time": "19:56:25",
+                        "end_time": "20:26:04"
                     },
                     {
-                        "chapter_name": "For Loops",
-                        "start_time": "2:32:44",
-                        "end_time": "2:41:20"
+                        "chapter_name": "RAGS",
+                        "start_time": "20:26:04",
+                        "end_time": "22:21:19"
                     },
                     {
-                        "chapter_name": "Exponent Function",
-                        "start_time": "2:41:20",
-                        "end_time": "2:47:13"
-                    },
-                    {
-                        "chapter_name": "2D Lists & Nested Loops",
-                        "start_time": "2:47:13",
-                        "end_time": "2:52:41"
-                    },
-                    {
-                        "chapter_name": "Building a Translator",
-                        "start_time": "2:52:41",
-                        "end_time": "3:00:18"
-                    },
-                    {
-                        "chapter_name": "Comments",
-                        "start_time": "3:00:18",
-                        "end_time": "3:04:17"
-                    },
-                    {
-                        "chapter_name": "Try / Except",
-                        "start_time": "3:04:17",
-                        "end_time": "3:12:41"
-                    },
-                    {
-                        "chapter_name": "Reading Files",
-                        "start_time": "3:12:41",
-                        "end_time": "3:21:26"
-                    },
-                    {
-                        "chapter_name": "Writing to Files",
-                        "start_time": "3:21:26",
-                        "end_time": "3:28:13"
-                    },
-                    {
-                        "chapter_name": "Modules & Pip",
-                        "start_time": "3:28:13",
-                        "end_time": "3:43:56"
-                    },
-                    {
-                        "chapter_name": "Classes & Objects",
-                        "start_time": "3:43:56",
-                        "end_time": "3:57:37"
-                    },
-                    {
-                        "chapter_name": "Building a Multiple Choice Quiz",
-                        "start_time": "3:57:37",
-                        "end_time": "4:08:28"
-                    },
-                    {
-                        "chapter_name": "Object Functions",
-                        "start_time": "4:08:28",
-                        "end_time": "4:12:37"
-                    },
-                    {
-                        "chapter_name": "Inheritance",
-                        "start_time": "4:12:37",
-                        "end_time": "4:20:43"
-                    },
-                    {
-                        "chapter_name": "Python Interpreter",
-                        "start_time": "4:20:43",
-                        "end_time": "4:20:43"
+                        "chapter_name": "Agents",
+                        "start_time": "22:21:19",
+                        "end_time": "22:53:55"
                     }
                 ],
-                "duration": "4:26:52",
-                "summarized_description": "This course provides a comprehensive introduction to Python, covering core concepts from basic syntax to more advanced topics like classes and file handling.  Follow along with video lessons to become proficient in Python programming. Dub tracks are available in Spanish, Arabic, Portuguese, and Hindi. The course is presented by Mike Dane and supported by Scrimba. Check out his channel to learn more and see his coding RPG.\n",
-                "thumbnail_url": "https://i.ytimg.com/vi/rfscVS0vtbw/hqdefault.jpg",
-                "title": "Learn Python - Full Course for Beginners [Tutorial]",
-                "url": "https://youtube.com/watch?v=rfscVS0vtbw"
+                "duration": "22:53:55",
+                "summarized_description": "ExamProChannel offers a comprehensive course on cloud-based Generative AI development. It covers the entire AI lifecycle, starting with fundamental AI/ML concepts and progressing through practical implementation, including prompt engineering, development tools, deployment, and optimization. Advanced topics like RAGs and AI Agents are also explored. The course is supported by Scrimba.\n",
+                "thumbnail_url": "https://i.ytimg.com/vi/nJ25yl34Uqw/hqdefault.jpg",
+                "title": "GenAI Essentials \u2013 Full Course for Beginners",
+                "url": "https://youtube.com/watch?v=nJ25yl34Uqw"
             },
             "track": [
                 0,
@@ -346,139 +140,6 @@
                 0,
                 0,
                 0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ]
-        },
-        {
-            "id": "nWsLw_1OpE0",
-            "start": "11-02-2025-07:34:40",
-            "daily_commitments": "1",
-            "day_preferences": "0011000",
-            "meta_data": {
-                "by": "freeCodeCamp.org",
-                "by_url": "htps://youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ",
-                "chapter_info": [
-                    {
-                        "chapter_name": "Blockchain Basics",
-                        "start_time": "0:00:00",
-                        "end_time": "2:55:04"
-                    },
-                    {
-                        "chapter_name": "Remix Favorite\u2019s List",
-                        "start_time": "2:55:04",
-                        "end_time": "4:54:18"
-                    },
-                    {
-                        "chapter_name": "Remix Buy Me A Coffee",
-                        "start_time": "4:54:18",
-                        "end_time": "7:28:35"
-                    },
-                    {
-                        "chapter_name": "AI Prompting",
-                        "start_time": "7:28:35",
-                        "end_time": "7:36:05"
-                    },
-                    {
-                        "chapter_name": "Python Crash Course",
-                        "start_time": "7:36:05",
-                        "end_time": "9:56:25"
-                    },
-                    {
-                        "chapter_name": "Web3py Favorites",
-                        "start_time": "9:56:25",
-                        "end_time": "11:45:23"
-                    },
-                    {
-                        "chapter_name": "Boa Favorites",
-                        "start_time": "11:45:23",
-                        "end_time": "12:44:32"
-                    },
-                    {
-                        "chapter_name": "Moccasin Favorites",
-                        "start_time": "12:44:32",
-                        "end_time": "15:03:48"
-                    },
-                    {
-                        "chapter_name": "Moccasin Five More",
-                        "start_time": "15:03:48",
-                        "end_time": "16:01:17"
-                    },
-                    {
-                        "chapter_name": "Moccasin Buy Me A Coffee",
-                        "start_time": "16:01:17",
-                        "end_time": "18:23:01"
-                    },
-                    {
-                        "chapter_name": "HTML/JS",
-                        "start_time": "18:23:01",
-                        "end_time": "18:27:45"
-                    },
-                    {
-                        "chapter_name": "Moccasin ERC20 and getting hired",
-                        "start_time": "18:27:45",
-                        "end_time": "20:35:02"
-                    },
-                    {
-                        "chapter_name": "Moccasin NFTs",
-                        "start_time": "20:35:02",
-                        "end_time": "22:55:48"
-                    },
-                    {
-                        "chapter_name": "Algorithmic Trading",
-                        "start_time": "22:55:48",
-                        "end_time": "24:45:58"
-                    },
-                    {
-                        "chapter_name": "Moccasin Stablecoin",
-                        "start_time": "24:45:58",
-                        "end_time": "27:42:06"
-                    },
-                    {
-                        "chapter_name": "Moccasin Signatures",
-                        "start_time": "27:42:06",
-                        "end_time": "29:36:15"
-                    },
-                    {
-                        "chapter_name": "Final project, Moccasin Upgrades",
-                        "start_time": "29:36:15",
-                        "end_time": "30:21:54"
-                    }
-                ],
-                "duration": "30:21:54",
-                "summarized_description": "Learn blockchain software development from scratch with Patrick Collins' comprehensive course using Python and Vyper. Even beginners will learn to develop smart contracts in Vyper, script in Python, and interact with contracts. The course covers fuzzing, NFTs, algorithmic trading, AI, ERC20s, DeFi, and more. It includes a Python crash course and explores topics like web3py, algorithmic trading and NFTs. Resources and additional courses are available via the provided links.\n",
-                "thumbnail_url": "https://i.ytimg.com/vi/nWsLw_1OpE0/hqdefault.jpg",
-                "title": "Vyper and Python Smart Contracts on Blockchain \u2013 Full Course for Beginners",
-                "url": "https://youtube.com/watch?v=nWsLw_1OpE0"
-            },
-            "track": [
                 0,
                 0,
                 0,
