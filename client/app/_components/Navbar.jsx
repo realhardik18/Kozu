@@ -18,7 +18,7 @@ export default function Navbar() {
         transition={{ type: "spring", stiffness: 200 }}
         className="text-2xl font-extrabold text-white tracking-wide"
       >
-        <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+        <span className="text-white text-transparent bg-clip-text">
           Kosu
         </span>
       </motion.div>
@@ -40,7 +40,6 @@ export default function Navbar() {
             Login
           </Link>
         </SignedOut>
-
         <SignedIn>
           <UserButton />
         </SignedIn>

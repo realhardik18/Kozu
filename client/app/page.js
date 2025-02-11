@@ -3,7 +3,7 @@
 import { FaChartLine, FaBolt, FaFolder } from "react-icons/fa";
 import Navbar from "./_components/Navbar";
 import { motion } from "framer-motion";
-
+import Link from "next/link";
 const features = [
   {
     title: "Improve Your Pace",
@@ -50,12 +50,11 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
+            <Link href={"kosu"}>
             <button className="bg-white text-black px-6 py-2 rounded-full text-lg font-medium hover:bg-gray-300">
               Get Started
             </button>
-            <button className="border border-gray-400 px-6 py-2 rounded-full text-lg font-medium hover:bg-gray-800">
-              Learn More
-            </button>
+            </Link>
           </motion.div>
         </motion.div>
 

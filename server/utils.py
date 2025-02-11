@@ -5,12 +5,9 @@ import isodate
 import math
 import google.generativeai as genai
 import json
-import datetime
-
+from datetime import datetime
 
 load_dotenv()
-G_API_KEY = os.getenv('G_API_KEY')
-API_KEY = os.getenv('YOUTUBE_API_KEY')
 
 def video_details(video_id):
     api_key=os.getenv('YOUTUBE_API_KEY')
@@ -31,7 +28,7 @@ def video_details(video_id):
     duration_hours=int(total_duration//3600)
     duration_mins=math.floor((total_duration%3600)/60)
     duration_seconds=math.floor(total_duration%60)
-    duration=f'{duration_hours}${duration_mins}${duration_seconds}$'
+    duration=f'{duration_hours}:{duration_mins}:{duration_seconds}'
     data={
         "title":snippet['title'],
         "description":snippet['description'],
@@ -91,7 +88,7 @@ Chapters
 def get_chapters(description,lenght):
     genai.configure(api_key=os.getenv('GEMINI_API_KEY'))
     model = genai.GenerativeModel("gemini-2.0-flash")
-    response = model.generate_content(f"your job is the extract the chapters from a given youtube based of their description data. the data returned should be strcitly of JSON format with an array of objects. each object will have fields: chapter_name, start_time,end_time. if a give video does not have any chapters to extract return the text None. here is the data {description}. reply only with the json data or None and nothing else")
+    response = model.generate_content(f"your job is the extract the chapters from a given youtube based of their description data. the data returned should be strcitly of JSON format with an array of objects. each object will have fields: chapter_name, start_time,end_time. if a give video does not have any chapters to extract return the text None.if a certain chapter has the same start time and end time , you must not add it. here is the data {description}. reply only with the json data or None and nothing else")
     if 'json' not in response.text:
         return False
     else:
@@ -106,37 +103,14 @@ def summarize_description(description):
     response = model.generate_content(f"your job is to summarize this description in less than 100 words {description}")
     return response.text
     
-    
-
-
-
-#print(video_details('4rALiJgQjHY'))
 #print(get_chapters(sample_description,453))
-
-def gemini_response(tags):
-    genai.configure(api_key=G_API_KEY)
-
-    # Select the model (e.g., gemini-pro)
-    model = genai.GenerativeModel("gemini-1.5-flash")
-
-    # Define the prompt
-    prompt = (f"Are these tags apt for a educational lecture which is of a length that some people might find it hard to watch in one sitting?, these are the tags:{tags}, just say true or false, no other response")
-
-    # Generate the response
-    response = model.generate_content(prompt)
-    return response.text
-
-def is_educational(video_id):
-    url = f"https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails&id={video_id}&key={API_KEY}"
-    
+def is_educational(video_id):        
+    url = f"https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails&id={video_id}&key={API_KEY}"    
     response = requests.get(url)
     data = response.json()
-
     if "items" not in data or not data["items"]:
         return False  # Video not found
-
     item = data["items"][0]
-    
     # Get duration and convert to seconds
     if "contentDetails" in item:
         iso_duration = item["contentDetails"]["duration"]
@@ -150,32 +124,42 @@ def is_educational(video_id):
     title = snippet["title"].lower()
     description = snippet["description"].lower()
     tags = [tag.lower() for tag in snippet.get("tags", [])]  # Get tags safely
+    genai.configure(api_key=os.getenv('GEMINI_API_KEY'))
+    model = genai.GenerativeModel("gemini-2.0-flash")
+    response = model.generate_content(f"Are these tags apt for a educational lecture which is of a length that some people might find it hard to watch in one sitting?, these are the tags:{tags}, just say true or false")
+    return eval(response)            
 
-    if gemini_response(tags) == 'True':
-        return True
-    return False
+def create_kosu(id,start,daily_commitments,day_preferences):
+    with open('db.json','r') as file:
+        data=file.read()
+    data=eval(data)
+    video_data=video_details(id)    
+    new_data={
+        "id":id,
+        "start":str(start),
+        "daily_commitments":daily_commitments,
+        "day_preferences":day_preferences,
+        "meta_data":{
+            "by":video_data['by'],
+            "by_url":video_data['by_url'],
+            "chapter_info":video_data['chapter_info'],
+            "duration":video_data['duration'],
+            "summarized_description":video_data["summarized_description"],
+            "thumbnail_url":video_data['thumbnail_url'],
+            "title":video_data['title'],
+            "url":video_data['url']
+        }
+    }    
+    data['kosu'].append(new_data)
+    print(data)
+    with open('db.json','w') as file:
+        json.dump(data,file,indent=4)
 
-with open("kosu.json", "r") as file:
-    data = json.load(file)  # Load JSON into a dictionary
 
-def convert_to_datetime(timestamp):
-    return datetime.strptime(timestamp, "%Y-%m-%d-%H:%M:%S")
-
-def enter_buffer_time(data): #kosu calculator
-    start_time = convert_to_datetime(data["kosu_started"])
-    end_time = convert_to_datetime(data["kosu_ended"])
-    data['buffer_time'] = start_time - end_time
-    with open("kosu.json", "w") as file:
-        json.dump(data, file, indent=4)  # Pretty print with indentation
-
-def completion_percentage(data):
-    duration = convert_to_datetime(data['length of video'])
-    completed = convert_to_datetime(data['completed'])
-    percentage = (completed / duration) * 100
-    data['completion_percentage'] = percentage
-    with open("kosu.json", "w") as file:
-        json.dump(data, file, indent=4)
-
-
+with open('db.json','r') as file:
+    d=file.read()
+    d=eval(d)
+    print(len(d['kosu']))
+#print(create_kosu('4rALiJgQjHY',datetime.now().strftime("%d-%m-%Y-%H:%M:%S"),4,'1010101'))
 
 
