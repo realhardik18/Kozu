@@ -62,7 +62,7 @@ export default function ToDo() {
   if (!data) return <div className="min-h-screen bg-black flex items-center justify-center font-mono text-gray-400">No data found</div>;
 
   return (
-    <div>
+    <div >
       <Navbar />
       <TooltipProvider>
         <div className="min-h-screen bg-black">
@@ -103,11 +103,15 @@ export default function ToDo() {
                       return (
                         <li key={index} className="space-y-1">
                           <span className="text-gray-300">{chapter.chapter_name}</span>
-                          <Progress
-                            bg="bg-green-500"
+                          <Progress                                                        
+                            bg="bg-transparent"
                             value={progress}
                             className="w-5/6"
-                            indicatorClassName="bg-green-700"
+                            indicatorClassName="bg-transparent"
+                            style={{
+                              backgroundColor: "#3f3f46", // Darker green for the empty part
+                              "--indicator-bg": "#004d00", // Brighter green for the filled progress
+                            }}
                           />
 
                           <p className="text-xs text-gray-400">{progress.toFixed(2)}% completed</p>
