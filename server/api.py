@@ -40,4 +40,13 @@ def update():
     with open('db.json','w') as file:
         json.dump(data,file,indent=4)
     return jsonify('ok'),200
+
+@api.route("/get_cursor")
+def get_cursor():
+    id=request.args.get('id')    
+    with open('db.json','r') as file:
+        data=file.read()
+        data=eval(data)    
+    ids=[obj['id']for obj in data['kosu']]    
+    return jsonify(data['kosu'][ids.index(id)]['video_cursor']),200
 api.run(debug=True)
