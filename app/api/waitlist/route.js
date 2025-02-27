@@ -11,8 +11,8 @@ export async function POST(req) {
 
         // Get the appropriate webhook URL based on channel
         const webhookUrl = channel 
-            ? process.env[`NEXT_PUBLIC_DISCORD_WEBHOOK_${channel.toUpperCase()}`] 
-            : process.env.NEXT_PUBLIC_DISCORD_WEBHOOK;
+            ? process.env[`DISCORD_WEBHOOK_${channel.toUpperCase()}`] 
+            : process.env.DISCORD_WEBHOOK;
             
         if (!webhookUrl) {
             return NextResponse.json({ 'message': 'Invalid channel or missing webhook URL' }, { status: 400 });
