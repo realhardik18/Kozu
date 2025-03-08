@@ -12,19 +12,6 @@ export default function Navbar() {
           <Link href="/" className="text-xl font-bold text-white">
             Kozu
           </Link>
-          
-          <div className="flex items-center gap-4">
-            <Link href="/dashboard">
-              <Button variant="ghost" className="text-zinc-400 hover:text-white">
-                Dashboard
-              </Button>
-            </Link>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-              <Button size="icon" variant="ghost" className="text-zinc-400 hover:text-white">
-                <Github className="size-5" />
-              </Button>
-            </a>
-          </div>
         </div>
       </div>
     </nav>
