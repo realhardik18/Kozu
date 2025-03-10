@@ -1,5 +1,6 @@
 "use client"
 
+import React, { useState, useEffect, useRef } from "react";
 import { cn } from "@/lib/utils"
 import {
   ListTodo,
@@ -16,7 +17,6 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import {
@@ -28,6 +28,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { useSession, signOut } from "next-auth/react";
 
 const menuItems = [
   {
@@ -77,15 +78,21 @@ const menuItems = [
   },
 ]
 
-export default function SideNav() {
+function SideNav({name,email,avatar_url}) {
+  const {data:session}=useSession()
+  console.log(session.user.name)
   const pathname = usePathname()
   const [collapsed, setCollapsed] = useState(false)
   const [mounted, setMounted] = useState(false)
+  const isInitialMount = useRef(true);
 
   // This ensures animations only run after initial mount
   useEffect(() => {
-    setMounted(true)
-  }, [])
+    if (isInitialMount.current) {
+      setMounted(true);
+      isInitialMount.current = false;
+    }
+  }, []);
 
   return (
     <div
@@ -214,15 +221,15 @@ export default function SideNav() {
                 <div className="flex items-center gap-3 w-full">
                   <div className="relative flex-shrink-0">
                     <Avatar className="border-2 border-zinc-800 h-10 w-10">
-                      <AvatarImage src="https://github.com/shadcn.png" alt="User" />
+                      <AvatarImage src={avatar_url} key={avatar_url} alt="User" />
                       <AvatarFallback>JD</AvatarFallback>
                     </Avatar>
                     <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-zinc-900" />
                   </div>
                   {!collapsed && (
                     <div className="flex flex-col items-start text-left overflow-hidden">
-                      <span className="text-sm font-medium text-zinc-100 truncate w-full">John Doe</span>
-                      <span className="text-xs text-zinc-400 truncate w-full">john@example.com</span>
+                      <span className="text-sm font-medium text-zinc-100 truncate w-full">{name}</span>
+                      <span className="text-xs text-zinc-400 truncate w-full">{email}</span>
                     </div>
                   )}
                 </div>
@@ -254,4 +261,6 @@ export default function SideNav() {
     </div>
   )
 }
+
+export default React.memo(SideNav);
 

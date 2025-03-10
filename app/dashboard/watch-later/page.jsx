@@ -2,16 +2,17 @@
 
 import React from 'react'
 import SideNav from '../_components/SideNav'
-
-function WatchLater() {
+import { useSession } from 'next-auth/react';
+function Notes() {
+  const { data: session, status } = useSession();
   return (
     <div className="min-h-screen bg-black text-white">
       <div className="flex">
-        <SideNav />
+        <SideNav name={session.user.name} email={session.user.email} avatar_url={session.user.image}/>
         <main className="flex-1 p-8">
           <div className="mb-8">
-            <h1 className="text-3xl font-bold">Watch Later</h1>
-            <p className="text-zinc-400">Watch Later</p>
+            <h1 className="text-3xl font-bold">My notes</h1>
+            <p className="text-zinc-400">Here are your personal notes</p>
           </div>          
         </main>
       </div>
@@ -19,4 +20,4 @@ function WatchLater() {
   )
 }
 
-export default WatchLater
+export default Notes
